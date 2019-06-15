@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #e6ecf0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #14171a;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+a {
+    color: #7367F0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    color: #333;
+    display: grid;
+    height: 100%;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav .search {
+    display: grid;
+    grid-template-columns: 220px 40px 70px;
+    grid-column-gap: 10px;
+    font-weight: bold;
+    justify-content: right;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nav .navlist li {
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    transition: all .15s ease-in-out;
+    font-size: 13px;
+    color: #66757f;
+    font-weight: bold;
+    display: flex;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.nav .navlist .Icon {
+    font-size: 20px;
+    padding-right: 6px;
+}
+
+.nav .navlist li:nth-child(1) .Icon {
+    color: #7367F0;
+}
+
+.nav .navlist li:nth-child(1) {
+    border-bottom: 2px solid #7367F0;
+}
+
+.nav .navlist li:nth-child(1n+2) {
+    border-bottom: 1px solid #7367F0;
+}
+
+
+.nav .navlist li:hover {
+    border-bottom: 2px solid #7367F0;
+}
+
+.box {
+    background-color: #fff;
+    color: #333;
+}
+
+.trends {
+    display: grid;
+    grid-template-rows: 35px;
+    padding-bottom: 15px;
+}
+
+.trends .item {
+    padding: 10px 15px 0 15px;
+    color: #657786;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.trends h4 {
+    color: #7367F0;
+    font-size: 14px;
+    margin: 0;
+}
+
+.trends h3 {
+    color: #14171a;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.content .profile-image {
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: url("images/profb.jpg") center center;
+    background-size: cover;
+}
+
+.content .tweet-box {
+    background-color: #F1EFFD;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+}
+
+.content .tweet-box input[name="tweet"] {
+    background: #fff;
+    border: 1px solid #cecdd1;
+    border-radius: 8px;
+    padding: 8px;
+    outline-width: 0;
+}
+
+.content ::placeholder {
+    color: #7367F0;
+}
+
+.content .post {
+    display: grid;
+    padding: 10px 15px 10px 12px;
+    grid-template-columns: 60px 1fr;
+    color: #14171a;
+    border-bottom: 1px solid #e6ecf0;
+}
+
+.content .post .name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content .post .handle {
+    font-size: 14px;
+    color: #657786;
+}
+
+.content .post .icons {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    font-size: 18px;
+    color: #657786;
+}
+
+.content .post .icons {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.content .post .icons .num {
+    position: relative;
+    margin-left: 12px;
+    top: -2px;
+}
+
+.content .post .icons .Icon {
+    font-size: 18px;
+}
+
+.followbox {
+    padding: 15px;
+}
+
+.followbox h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.followbox .user {
+    border-bottom: 1px solid #e6ecf0;
+    padding-bottom: 8px;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    margin-bottom: 10px;
+}
+
+.followbox .name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.followbox .handle {
+    font-size: 14px;
+    color: #657786;
+}
+
+.followbox .button {
+    border: 1px solid #7367F0;
+    color: #7367F0;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    text-align: center;
+    width: 85px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.followbox .button:hover {
+    background-color: rgba(224, 221, 255, 0.5);
+}
+
+.followbox .follow-footer {
+    color: #7367F0;
+    font-size: 12px;
+}
+
+.footer-right {
+    display: grid;
+    padding: 15px;
+    color: #657786;
+    font-size: 12px;
+    align-items: center;
+    height: 140px;
+}
+
+.footer-right .footeradv {
+    padding-top: 15px;
+    display: flex;
+    color: #7367F0;
+}
+
+.footer-right .footeradv .Icon {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.footer-right .footernav {
+    border-bottom: 1px solid #e6ecf0;
+    padding-bottom: 15px;
+}
+
+.profile {
+    display: grid;
+}
+
+.profile .header-image {
+    height: 95px;
+    background: url("images/600x200.jpg") center center;
+    background-size: cover;
+}
+
+.profile .stats {
+    display: grid;
+    grid-template-columns: 75px 90px 75px;
+    padding: 0 0 15px 15px;
+    color: #657786;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .02em;
+    line-height: 16px;
+    transition: color .15s ease-in-out;
+}
+
+.profile .name-handle {
+    display: block;
+}
+
+.profile .numbers {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 3px;
+    transition: color .15s ease-in-out;
+    color: #7367F0;
+}
+
+.profile .profile-image {
+    height: 72px;
+    width: 72px;
+    border: 3px solid #fff;
+    margin-top: -40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: url("images/profb.jpg") center center;
+    background-size: cover;
+}
+
+.profile .name {
+    position: relative;
+    top: -25px;
+    left: 90px;
+    height: 25px;
+}
+
+.profile .name-title {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "l l l c c c c c c r r r";
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #fff;
+    grid-area: h;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.header .profile-image {
+    border-radius: 50%;
+    width: 32px;
+    background: url("images/profn.jpg") no-repeat center center;
+    background-size: cover;
+    justify-self: center;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: url("images/profn.jpg");
+}
+
+.br {
+    background: url("images/bob_ross.jpg");
+    background-size: cover;
+}
+
+.vg {
+    background: url("images/vin_gas.jpg");
+    background-size: cover;
+}
+
+.elon {
+    background: url("images/elon.jpg");
+    background-size: cover;
+}
+
+.bb {
+    background: url("images/bobbarker.jpg");
+    background-size: cover;
+}
+
+.python {
+    background: url("images/python.png");
+    background-size: cover;
+}
+
+.kw {
+    background: url("images/kan.jpg");
+    background-size: cover;
+}
+
+.sj {
+    background: url("images/sj.jpg");
+    background-size: cover;
+}
+
+.header .logo {
+    text-align: center;
+}
+
+.header .logo img {
+    width: 5%;
+}
+
+.header .btn-tweet {
+    display: flex;
+    background-color: #8F85F3;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.left {
+    grid-area: l;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.right {
+    grid-area: r;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.content {
+    grid-area: c;
+    background-color: #fff;
+}
+
+.footer {
+    grid-area: f;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.footer .Icon {
+    font-size: 18px;
+}
+
+input[name="search"] {
+    background-color: #f5f8fa;
+    border-radius: 21px;
+    border: 1px solid #e6ecf0;
+    box-sizing: border-box;
+    color: #14171a;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 16px;
+    padding: 8px 32px 8px 12px;
+    transition: all .2s ease-in-out;
+}
+
+input[name="search"]:disabled {
+    display: none;
+}
+
+input[name="search"]:focus {
+    outline-width: 0;
+    border: 2px solid #7367f0;
+}
